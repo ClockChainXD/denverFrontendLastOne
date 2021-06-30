@@ -6,7 +6,7 @@ const tokens = {
   dnr: {
     symbol: 'DNR',
     address: {
-      56: '0xAe415f867D30844898D9cC7104FFB586E42Babae',
+      56: '0x499a4eE30b22Df922234B11c5465b4Ff74d8a457',
       97: '0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe',
     },
     decimals: 18,
@@ -627,7 +627,7 @@ const tokens = {
   syrup: {
     symbol: 'SYRUP',
     address: {
-      56: '0xD5Dc85B354DC0F6a67FC9F5f4B8129783F8DBaBe',
+      56: '0xbC62Ca4D4b78475a93252586eFF948b1C3eE34a9',
       97: '0xfE1e507CeB712BDe086f3579d2c03248b2dB77f9',
     },
     decimals: 18,

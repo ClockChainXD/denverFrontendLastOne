@@ -10,7 +10,7 @@ const farms: FarmConfig[] = [
     lpSymbol: 'DNR',
     lpAddresses: {
       97: '0x9C21123D94b93361a29B2C2EFB3d5CD8B17e0A9e',
-      56: '0xAe415f867D30844898D9cC7104FFB586E42Babae',
+      56: '0x499a4eE30b22Df922234B11c5465b4Ff74d8a457',
     },
     token: tokens.syrup,
     quoteToken: tokens.wbnb,
@@ -20,7 +20,7 @@ const farms: FarmConfig[] = [
     lpSymbol: 'DNR-BNB LP',
     lpAddresses: {
       97: '0x3ed8936cAFDF85cfDBa29Fbe5940A5b0524824F4',
-      56: '0x9Ac981c9468Cd1bCF8F75fd71D0E860E8B9e541c',
+      56: '0x54561EC49c1a6000D402e118dBAdD01022148dA4',
     },
     token: tokens.dnr,
     quoteToken: tokens.wbnb,

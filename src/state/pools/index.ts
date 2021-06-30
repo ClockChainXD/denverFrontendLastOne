@@ -36,7 +36,7 @@ const initialState: PoolsState = {
     userData: {
       isLoading: true,
       userShares: null,
-      dnrAtLastUserAction: null,
+      DNRAtLastUserAction: null,
       lastDepositedTime: null,
       lastUserActionTime: null,
     },

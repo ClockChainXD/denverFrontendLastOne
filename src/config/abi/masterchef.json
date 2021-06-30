@@ -139,19 +139,6 @@
   },
   {
     "inputs": [],
-    "name": "DNR",
-    "outputs": [
-      {
-        "internalType": "contract DenverToken",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
     "name": "DNRPerBlock",
     "outputs": [
       {
@@ -223,6 +210,19 @@
     "outputs": [
       {
         "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "dnr",
+    "outputs": [
+      {
+        "internalType": "contract DenverToken",
         "name": "",
         "type": "address"
       }

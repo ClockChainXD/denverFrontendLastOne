@@ -11,7 +11,7 @@ const fetchVaultUser = async (account: string) => {
       userShares: new BigNumber(userContractResponse.shares.toString()).toJSON(),
       lastDepositedTime: userContractResponse.lastDepositedTime.toString(),
       lastUserActionTime: userContractResponse.lastUserActionTime.toString(),
-      dnrAtLastUserAction: new BigNumber(userContractResponse.dnrAtLastUserAction.toString()).toJSON(),
+      DNRAtLastUserAction: new BigNumber(userContractResponse.DNRAtLastUserAction.toString()).toJSON(),
     }
   } catch (error) {
     return {
@@ -19,7 +19,7 @@ const fetchVaultUser = async (account: string) => {
       userShares: null,
       lastDepositedTime: null,
       lastUserActionTime: null,
-      dnrAtLastUserAction: null,
+      DNRAtLastUserAction: null,
     }
   }
 }

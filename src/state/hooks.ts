@@ -134,7 +134,7 @@ export const useLpTokenPrice = (symbol: string) => {
     const overallValueOfAllTokensInFarm = valueOfBaseTokenInFarm.times(2)
     // Divide total value of all tokens, by the number of LP tokens
     const totalLpTokens = getBalanceAmount(new BigNumber(farm.lpTotalSupply))
-    lpTokenPrice = overallValueOfAllTokensInFarm.div(totalLpTokens)
+    lpTokenPrice = overallValueOfAllTokensInFarm.div(totalLpTokens).times(10**Math.log10(totalLpTokens.toNumber()))
   }
 
   return lpTokenPrice
@@ -207,7 +207,7 @@ export const useCakeVault = () => {
     userData: {
       isLoading,
       userShares: userSharesAsString,
-      dnrAtLastUserAction: dnrAtLastUserActionAsString,
+      DNRAtLastUserAction: DNRAtLastUserActionAsString,
       lastDepositedTime,
       lastUserActionTime,
     },
@@ -237,9 +237,9 @@ export const useCakeVault = () => {
     return new BigNumber(userSharesAsString)
   }, [userSharesAsString])
 
-  const dnrAtLastUserAction = useMemo(() => {
-    return new BigNumber(dnrAtLastUserActionAsString)
-  }, [dnrAtLastUserActionAsString])
+  const DNRAtLastUserAction = useMemo(() => {
+    return new BigNumber(DNRAtLastUserActionAsString)
+  }, [DNRAtLastUserActionAsString])
 
   return {
     totalShares,
@@ -256,7 +256,7 @@ export const useCakeVault = () => {
     userData: {
       isLoading,
       userShares,
-      dnrAtLastUserAction,
+      DNRAtLastUserAction,
       lastDepositedTime,
       lastUserActionTime,
     },

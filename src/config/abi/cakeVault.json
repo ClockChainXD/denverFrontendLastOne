@@ -602,7 +602,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "dnrAtLastUserAction",
+        "name": "DNRAtLastUserAction",
         "type": "uint256"
       },
       {

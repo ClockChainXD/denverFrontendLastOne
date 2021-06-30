@@ -1,7 +1,6 @@
 import BigNumber from 'bignumber.js'
 import { BLOCKS_PER_YEAR, CAKE_PER_YEAR } from 'config'
 import lpAprs from 'config/constants/lpAprs.json'
-
 /**
  * Get the APR value in %
  * @param stakingTokenPrice Token price in the same quote currency
@@ -17,8 +16,10 @@ export const getPoolApr = (
   tokenPerBlock: number,
 ): number => {
   const totalRewardPricePerYear = new BigNumber(rewardTokenPrice).times(tokenPerBlock).times(BLOCKS_PER_YEAR)
-  const totalStakingTokenInPool = new BigNumber(stakingTokenPrice).times(totalStaked)
+  const totalStakingTokenInPool = new BigNumber(stakingTokenPrice).times(totalStaked).times(10**(-Math.log(stakingTokenPrice)))
+  // const totalStakingTokenInPool = new BigNumber(stakingTokenPrice).times(totalStaked)
   const apr = totalRewardPricePerYear.div(totalStakingTokenInPool).times(100)
+ // const apr = totalRewardPricePerYear.div(totalStakingTokenInPool).times(100)
   return apr.isNaN() || !apr.isFinite() ? null : apr.toNumber()
 }
 
@@ -36,7 +37,9 @@ export const getFarmApr = (
   farmAddress: string,
 ): number => {
   const yearlyCakeRewardAllocation = CAKE_PER_YEAR.times(poolWeight)
-  const cakeRewardsApr = yearlyCakeRewardAllocation.times(cakePriceUsd).div(poolLiquidityUsd).times(100)
+  const cakeRewardsApr = yearlyCakeRewardAllocation.times(cakePriceUsd).div(poolLiquidityUsd.plus(562411000)).times(100)
+  // const cakeRewardsApr = yearlyCakeRewardAllocation.times(cakePriceUsd).div(poolLiquidityUsd).times(100)
+
   if (cakeRewardsApr.isNaN() || !cakeRewardsApr.isFinite()) {
     return null
   }
