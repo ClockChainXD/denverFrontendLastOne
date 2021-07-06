@@ -113,7 +113,7 @@ const IfoSteps: React.FC<Props> = ({ ifo, walletIfoData }) => {
             </Heading>
             <Text color="textSubtle" small>
               {t(
-                'After the IFO sales finish, you can claim any IFO tokens that you bought, and any unspent CAKE-BNB LP tokens will be returned to your wallet.',
+                'After the IFO sales finish, you can claim any IFO tokens that you bought, and any unspent DNR-BNB LP tokens will be returned to your wallet.',
               )}
             </Text>
           </CardBody>
