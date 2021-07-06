@@ -37,7 +37,7 @@ export const getFarmApr = (
   farmAddress: string,
 ): number => {
   const yearlyCakeRewardAllocation = CAKE_PER_YEAR.times(poolWeight)
-  const cakeRewardsApr = yearlyCakeRewardAllocation.times(cakePriceUsd).div(poolLiquidityUsd.plus(562411000)).times(100)
+  const cakeRewardsApr = yearlyCakeRewardAllocation.times(cakePriceUsd).div(poolLiquidityUsd.plus(5624110)).times(100)
   // const cakeRewardsApr = yearlyCakeRewardAllocation.times(cakePriceUsd).div(poolLiquidityUsd).times(100)
 
   if (cakeRewardsApr.isNaN() || !cakeRewardsApr.isFinite()) {

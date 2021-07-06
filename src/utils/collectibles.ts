@@ -17,7 +17,7 @@ export const getIdentifierKeyFromAddress = (nftAddress: string) => {
 }
 
 /**
- * Some sources like Pancake do not return HTTP tokenURI's
+ * Some sources like Denver do not return HTTP tokenURI's
  */
 export const getTokenUrl = (tokenUri: string) => {
   if (tokenUri.startsWith('ipfs://')) {
