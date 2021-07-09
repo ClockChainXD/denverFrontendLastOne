@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardBody, Heading, Text } from '@pancakeswap/uikit'
+import { Card, CardBody, Heading, Text } from '@denverswap/uikit'
 import { useTranslation } from 'contexts/Localization'
 import CardContent from './CardContent'
 
@@ -9,7 +9,7 @@ const NftInWalletCard = () => {
   return (
     <Card>
       <CardBody>
-        <CardContent imgSrc="/images/present.svg">
+        <CardContent imgSrc="/logo.png">
           <Heading mb="8px">{t('NFT in wallet')}</Heading>
           <Text>{t('Trade in your NFT for DNR, or just keep it for your collection.')}</Text>
         </CardContent>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tag, VerifiedIcon, CommunityIcon, RefreshIcon, AutoRenewIcon, TagProps } from '@pancakeswap/uikit'
+import { Tag, VerifiedIcon, CommunityIcon, RefreshIcon, AutoRenewIcon, TagProps } from '@denverswap/uikit'
 import { useTranslation } from 'contexts/Localization'
 
 const CoreTag: React.FC<TagProps> = (props) => {
